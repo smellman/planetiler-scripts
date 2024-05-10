@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-java -Xmx24g \
+java -Xmx30g \
   -jar planetiler.jar \
   `# Download the latest planet.osm.pbf from s3://osm-pds bucket` \
   --area=planet --bounds=world --download \
