@@ -2,7 +2,7 @@
 set -e
 #java -Xmx24g \
 #  -jar planetiler.jar \
-java -Xmx137g \
+java -Xmx150g \
   `# return unused heap memory to the OS` \
   -XX:MaxHeapFreeRatio=40 \
   -jar planetiler.jar \
