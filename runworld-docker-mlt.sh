@@ -2,8 +2,8 @@
 set -e
 #java -Xmx24g \
 #  -jar planetiler.jar \
-docker run -e JAVA_TOOL_OPTIONS="-Xmx32g" -u `id -u`:`id -g` -v "$(pwd)/data":/data ghcr.io/onthegomap/planetiler:0.9.4-SNAPSHOT \
-  -Xmx32g \
+docker run -e JAVA_TOOL_OPTIONS="-Xmx128g" -u `id -u`:`id -g` -v "$(pwd)/data":/data ghcr.io/onthegomap/planetiler:0.10.0 \
+  -Xmx128g \
   `# Download the latest planet.osm.pbf from s3://osm-pds bucket` \
   --area=planet --bounds=world --download \
   `# Accelerate the download by fetching the 10 1GB chunks at a time in parallel` \
