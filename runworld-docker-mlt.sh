@@ -2,7 +2,7 @@
 set -e
 #java -Xmx24g \
 #  -jar planetiler.jar \
-docker run -e JAVA_TOOL_OPTIONS="-Xmx128g" -u `id -u`:`id -g` -v "$(pwd)/data":/data ghcr.io/onthegomap/planetiler:0.10.1 \
+docker run -e JAVA_TOOL_OPTIONS="-Xmx128g" -u `id -u`:`id -g` -v "$(pwd)/data":/data ghcr.io/onthegomap/planetiler:0.10.2 \
   -Xmx128g \
   `# Download the latest planet.osm.pbf from s3://osm-pds bucket` \
   --area=planet --bounds=world --download \
