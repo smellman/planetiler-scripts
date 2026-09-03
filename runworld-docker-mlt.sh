@@ -9,5 +9,5 @@ docker run -e JAVA_TOOL_OPTIONS="-Xmx128g" -u `id -u`:`id -g` -v "$(pwd)/data":/
   `# Accelerate the download by fetching the 10 1GB chunks at a time in parallel` \
   --download-threads=10 --download-chunk-size-mb=1000 \
   --mbtiles=data/output-mlt.pmtiles \
-  --tile-format=mlt \
+  --tile-format=mlt --mlt-shared-dict --mlt-reorder-features \
   --nodemap-type=array --nodemap-storage=mmap 2>&1 | tee logs.txt
